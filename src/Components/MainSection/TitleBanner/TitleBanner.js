@@ -11,6 +11,7 @@ const TitleBanner = () => {
       style={{
         background:
           'radial-gradient(ellipse at center, rgba(226,91,89,1) 10%, rgba(39,43,48,0.7707457983193278) 70%)',
+        marginTop: '150px',
       }}
       className='row'
     >
@@ -20,16 +21,9 @@ const TitleBanner = () => {
         animate={{ x: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
         //
-        style={{
-          color: '#FBDE53',
-          fontFamily: 'Shadows Into Light',
-          fontSize: '50px',
-          fontWeight: 'bold',
-          textShadow: ' 2px 2px #830207',
-        }}
-        className=' col-lg-4 text-lg-end text-center my-auto'
+        className=' title col-lg-4 text-lg-end text-center my-auto'
       >
-        Web Design
+        DKMS <br /> Web Design
       </motion.h1>
       <motion.div
         //animation

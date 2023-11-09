@@ -2,11 +2,14 @@ import Navigation from './Navigation';
 import { motion } from 'framer-motion';
 
 const WholeNav = () => {
-  const logoHeight = 150;
+  const logoHeight = 100;
   const initialLogoScale = 0;
 
   return (
-    <div className=' d-flex align-items-center justify-content-between'>
+    <div
+      style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 10 }}
+      className=' d-flex align-items-center justify-content-between'
+    >
       <motion.div
         //animation
         initial={{
@@ -24,7 +27,7 @@ const WholeNav = () => {
         whileTap={{ scale: 0.9 }}
         //
         xs={2}
-        className='col-1 d-flex justify-content-center align-items-center mx-5'
+        className=' d-flex justify-content-center align-items-center mx-5 mt-2'
         style={{ zIndex: 1 }}
       >
         <img
@@ -40,7 +43,7 @@ const WholeNav = () => {
         animate={{ x: 0, scale: 1 }}
         transition={{ ease: 'easeOut', duration: 2 }}
         //
-        className=' col-8'
+        className=''
       >
         <Navigation />
       </motion.div>

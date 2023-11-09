@@ -22,7 +22,7 @@ const BoxCover = ({ isHovered, itemTitle, itemIcon }) => {
             opacity: isHovered ? 0 : 1,
             transition: '1s all ease',
           }}
-          className=' text-center text-danger'
+          className='textShadow text-center text-danger'
         >
           {itemTitle}
         </h4>
