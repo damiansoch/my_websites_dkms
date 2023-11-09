@@ -3,7 +3,7 @@ import { AiOutlineHome, AiOutlineMail } from 'react-icons/ai';
 
 const Navigation = () => {
   return (
-    <Navbar bg='danger' variant='dark' className=' me-5'>
+    <Navbar bg='dark' variant='dark' className=' me-5'>
       <Nav className='ms-auto'>
         <Nav.Link href='#top'>
           <AiOutlineHome size={30} color='#4AC547' />
