@@ -27,7 +27,8 @@ const ContactSection = () => {
           //animation
           ref={formRef}
           animate={{ opacity: isInViewForm ? 1 : 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ delay: 0.3, duration: 0.3 }}
           //
           id='contactForm'
           className=' col-sm-12 col-md-6'
@@ -37,8 +38,9 @@ const ContactSection = () => {
         <motion.div
           //animation
           ref={otherContactRef}
+          whileHover={{ scale: 1.05 }}
           animate={{ opacity: isInViewOtherContact ? 1 : 0 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.3 }}
           //
           className=' col-sm-12 col-md-6 mt-2 mt-md-0'
         >

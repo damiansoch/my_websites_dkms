@@ -9,7 +9,7 @@ const CarouselSection = () => {
   return (
     <motion.div
       ref={ref}
-      animate={{ scale: isInView ? 1 : 0 }}
+      animate={{ opacity: isInView ? 1 : 0 }}
       transition={{ delay: 0.5, duration: 1 }}
     >
       <Carousel fade style={{ marginTop: '60px' }}>

@@ -9,6 +9,7 @@ import ContactSection from './Components/ContactSection/ContactSection';
 import CarouselSection from './Components/CarousellSection/CarouselSection';
 import FooterSection from './Components/FooterSection/FooterSection';
 import BadgesSection from './Components/ContactSection/BadgesSection';
+import OfferSection from './Components/OfferSection/OfferSection';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </section>
         <section id='carousel'>
           <CarouselSection />
+        </section>
+        <section id='offerSection'>
+          <OfferSection />
         </section>
         <section id='contactSection'>
           <ContactSection />
