@@ -10,7 +10,7 @@ const TitleBanner = () => {
       //
       style={{
         background:
-          'radial-gradient(ellipse at center, rgba(226,91,89,1) 10%, rgba(39,43,48,0.7707457983193278) 70%)',
+          'radial-gradient(ellipse at center, rgba(226,91,89,1) 15%, rgba(39,43,48,0) 70%)',
         marginTop: '150px',
       }}
       className='row'
