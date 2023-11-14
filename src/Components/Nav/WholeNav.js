@@ -2,12 +2,25 @@ import Navigation from './Navigation';
 import { motion } from 'framer-motion';
 
 const WholeNav = () => {
-  const logoHeight = 100;
-  const initialLogoScale = 0;
+  let logoHeight = 100;
+  let navIconSize = 30;
+  let navHeight = 'auto';
 
+  const initialLogoScale = 0;
+  if (window.innerWidth < 768) {
+    logoHeight = 50;
+    navIconSize = 20;
+    navHeight = '70px';
+  }
   return (
     <div
-      style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 10 }}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 10,
+      }}
       className=' d-flex align-items-center justify-content-between'
     >
       <motion.div
@@ -45,7 +58,7 @@ const WholeNav = () => {
         //
         className=''
       >
-        <Navigation />
+        <Navigation navIconSize={navIconSize} navHeight={navHeight} />
       </motion.div>
     </div>
   );
