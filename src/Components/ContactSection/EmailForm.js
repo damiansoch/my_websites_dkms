@@ -16,17 +16,23 @@ const EmailForm = ({ setDivHeight }) => {
       className='shadow contactSingleContainer p-3'
     >
       <Form action='https://formspree.io/f/xyyqvawj' method='POST'>
-        <Form.Group className='mb-3' controlId='formBasicEmail'>
+        <Form.Group className='mb-3' controlId='email'>
           <Form.Label style={{ color: '#EE5F5B' }}>Email address</Form.Label>
-          <Form.Control type='email' name='email' placeholder='Enter email' />
+          <Form.Control
+            type='email'
+            id='email'
+            name='email'
+            placeholder='Enter email'
+          />
           <Form.Text style={{ color: '#EE5F5B' }}>
             <small>We'll never share your email with anyone else.</small>
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='formBasicPassword'>
+        <Form.Group className='mb-3' controlId='message'>
           <Form.Label style={{ color: '#EE5F5B' }}>Message</Form.Label>
           <textarea
+            id='message'
             name='message'
             className='form-control'
             placeholder='Message'
