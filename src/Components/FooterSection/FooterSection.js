@@ -6,9 +6,9 @@ const FooterSection = () => {
       style={{ height: '50px' }}
       className=' pe-3 d-flex justify-content-end '
     >
-      <p className='my-auto'>
+      <small className='my-auto text-muted'>
         Copyright © 2023 DKMS Websites. All rights reserved.
-      </p>
+      </small>
     </div>
   );
 };
