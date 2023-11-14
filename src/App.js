@@ -31,7 +31,7 @@ function App() {
         </section>
         <section id='contactSection'>
           <ContactSection />
-          <BadgesSection />
+          {/* <BadgesSection /> */}
         </section>
       </Container>
       <footer>
