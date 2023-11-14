@@ -1,4 +1,4 @@
-import React from 'react';
+import FacebookMsg from './FacebookMsg';
 
 const OterContactDetails = ({ divHeight }) => {
   return (
@@ -6,7 +6,7 @@ const OterContactDetails = ({ divHeight }) => {
       style={{ height: divHeight }}
       className='shadow contactSingleContainer p-3'
     >
-      <h6>other details</h6>
+      <FacebookMsg />
     </div>
   );
 };

@@ -19,7 +19,7 @@ const OfferCard = ({ offer }) => {
       />
       <motion.div
         //animation
-        initial={{ rotateX: '90deg' }}
+        initial={{ rotateX: '85deg' }}
         whileInView={{ rotateX: '0' }}
         transition={{ delay: 0.5, duration: 0.8, ease: 'backOut' }}
         //
