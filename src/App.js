@@ -19,7 +19,7 @@ function App() {
         <section id='titleBanner'>
           <TitleBanner />
         </section>
-        <section id='mainSection'>
+        <section id='mainSection' style={{ overflow: 'hidden' }}>
           <MainSection />
         </section>
         <section id='carousel'>

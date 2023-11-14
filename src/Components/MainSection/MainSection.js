@@ -36,7 +36,6 @@ const MainSection = () => {
     gap: '10px', // Optional gap between grid items
     rowGap: '150px',
     height: 'auto', // Set the container height to the viewport height
-    overflowX: 'hidden',
   };
   return (
     <div style={customGridStyle} className=' pt-3 pb-3'>
