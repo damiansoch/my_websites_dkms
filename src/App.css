@@ -55,6 +55,10 @@ footer {
 .carousel-indicators [data-bs-target] {
   background-color: #3cbd4b !important;
 }
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  transform: translateY(-80px);
+}
 
 /* services cards */
 .offer-card {
