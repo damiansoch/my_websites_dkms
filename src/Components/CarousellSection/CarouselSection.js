@@ -16,11 +16,20 @@ const CarouselSection = () => {
         {stages.map((stage, index) => (
           <Carousel.Item interval={3000} key={index}>
             <div
-              className=' d-flex align-items-center justify-content-center'
-              style={{ borderRadius: '20px', overflow: 'hidden' }}
+              className='d-flex align-items-center justify-content-center mx-auto'
+              style={{
+                borderRadius: '20px',
+                overflow: 'hidden',
+                maxWidth: '60vw',
+              }}
             >
               <img
-                style={{ borderRadius: '20px', objectFit: 'contain' }}
+                style={{
+                  borderRadius: '20px',
+                  width: '100%', // Set the width of the image to 100% of its container
+                  height: '100%', // Set the height of the image to 100% of its container
+                  objectFit: 'cover', // Scale the image while maintaining its aspect ratio
+                }}
                 src={`/icons/CarousellImgs/${stage.picture}`}
                 alt=''
                 className='shadow'
