@@ -6,12 +6,12 @@ const Logo = ({ initialLogoScale, logoHeight }) => {
     <motion.div
       //animation
       initial={{
-        x: '-100px',
+        x: '300px',
         y: 0,
         scale: initialLogoScale,
         opacity: 0.3,
       }}
-      animate={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+      animate={{ x: -50, y: 0, scale: 1, opacity: 1 }}
       transition={{ ease: 'easeOut', duration: 2, delay: 0.5 }}
       whileHover={{
         scale: 1.2,
