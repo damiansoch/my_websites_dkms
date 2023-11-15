@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const ClickOverlay = () => {
   // Function to generate a random delay
   function getRandomDelay() {
-    return 2 + Math.random() * 3; // Adjust the multiplier based on your preference
+    return 1 + Math.random() * 3; // Adjust the multiplier based on your preference
   }
 
   // Apply random delays to each element with the class 'fade-in-element'

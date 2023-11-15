@@ -93,7 +93,7 @@ footer {
 
 .clickOverlay {
   opacity: 0;
-  animation: fadeInOut 8s ease-in-out infinite;
+  animation: fadeInOut 4s ease-in-out infinite;
 }
 
 @keyframes fadeInOut {
