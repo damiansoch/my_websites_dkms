@@ -90,3 +90,26 @@ footer {
 .btn-close {
   background-color: #ee5f5b !important; /* Replace with your desired close button color */
 }
+
+.clickOverlay {
+  opacity: 0;
+  animation: fadeInOut 8s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import BoxCover from './BoxCover';
+import ClickOverlay from './ClickOverlay';
 
 const Box = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -63,6 +64,7 @@ const Box = ({ item }) => {
         itemTitle={item.title}
         itemIcon={item.icon}
       />
+      <ClickOverlay />
     </>
   );
 };
