@@ -46,13 +46,18 @@ const OfferCard = ({ offer }) => {
           {/* Video Background */}
 
           <Card.ImgOverlay className='video-overlay '>
-            <video autoPlay loop muted className='card-video'>
+            <img
+              className='card-video'
+              src={`/icons/ServicesImages/${offer.picture}`}
+              alt={`/icons/ServicesImages/${offer.picture}`}
+            />
+            {/* <video autoPlay loop muted className='card-video'>
               <source
                 src={`/icons/ServicesImages/${offer.picture}`}
                 type='video/mp4'
               />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
           </Card.ImgOverlay>
 
           {/* Card Content */}
