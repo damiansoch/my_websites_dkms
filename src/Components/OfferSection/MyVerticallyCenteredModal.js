@@ -49,16 +49,30 @@ function MyVerticallyCenteredModal(props) {
         <p style={{ textAlign: 'justify' }}>{message}</p>
       </Modal.Body>
       <Modal.Footer className=' d-flex align-items-center justify-content-evenly'>
-        <Button active onClick={() => chooseTopicHandler('definition')}>
+        <Button
+          className=' btn-sm btn-success'
+          active
+          onClick={() => chooseTopicHandler('definition')}
+        >
           <VscActivateBreakpoints size={30} color='#EE5F5B' />
+          <br />
           <span className=' ms-2'>{props.offer.definition.title}</span>
         </Button>
-        <Button onClick={() => chooseTopicHandler('advantages')}>
+        <Button
+          className=' btn-sm btn-success'
+          onClick={() => chooseTopicHandler('advantages')}
+        >
           <MdOutlineCenterFocusStrong size={30} color='#EE5F5B' />
+          <br />
           <span className=' ms-2'>{props.offer.advantages.title}</span>
         </Button>
-        <Button onClick={() => chooseTopicHandler('useCases')}>
+        <Button
+          variant='secondaty'
+          className=' btn-sm btn-success'
+          onClick={() => chooseTopicHandler('useCases')}
+        >
           <SiWheniwork size={30} color='#EE5F5B' />
+          <br />
           <span className=' ms-2'>{props.offer.useCases.title}</span>
         </Button>
       </Modal.Footer>
