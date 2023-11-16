@@ -1,17 +1,10 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { stages } from './devStages';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { AttentionSeeker } from 'react-awesome-reveal';
 
 const CarouselSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
   return (
-    <motion.div
-      ref={ref}
-      animate={{ opacity: isInView ? 1 : 0 }}
-      transition={{ delay: 0.5, duration: 1 }}
-    >
+    <AttentionSeeker effect='pulse' fraction={0.5}>
       <Carousel fade style={{ marginTop: '60px' }}>
         {stages.map((stage, index) => (
           <Carousel.Item interval={3000} key={index}>
@@ -45,7 +38,7 @@ const CarouselSection = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-    </motion.div>
+    </AttentionSeeker>
   );
 };
 
