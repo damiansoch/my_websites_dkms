@@ -16,7 +16,7 @@ const OfferCard = ({ offer }) => {
         onHide={() => setModalShow(false)}
         offer={offer}
       />
-      <AttentionSeeker delay={offer.delay} effect='flash'>
+      <AttentionSeeker delay={offer.delay} effect='wobble'>
         <div
           onClick={() => serviceClickHandler()}
           style={{
