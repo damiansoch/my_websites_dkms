@@ -1,7 +1,7 @@
 import { Card } from 'react-bootstrap';
 import { useState } from 'react';
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
-import { AttentionSeeker } from 'react-awesome-reveal';
+import { Bounce } from 'react-awesome-reveal';
 
 const OfferCard = ({ offer }) => {
   const [modalShow, setModalShow] = useState(false);
@@ -16,7 +16,7 @@ const OfferCard = ({ offer }) => {
         onHide={() => setModalShow(false)}
         offer={offer}
       />
-      <AttentionSeeker delay={offer.delay} effect='wobble'>
+      <Bounce delay={offer.delay} duration={1500}>
         <div
           onClick={() => serviceClickHandler()}
           style={{
@@ -54,7 +54,7 @@ const OfferCard = ({ offer }) => {
             </h1>
           </div>
         </div>
-      </AttentionSeeker>
+      </Bounce>
     </div>
   );
 };
