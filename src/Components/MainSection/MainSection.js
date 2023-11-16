@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { items } from './items';
 import Box from './Box';
-import { motion } from 'framer-motion';
 
 const MainSection = () => {
   const [gridTemplateColumns, setGridTemplateColumns] = useState('1fr');
