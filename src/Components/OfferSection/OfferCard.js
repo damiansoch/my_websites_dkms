@@ -1,7 +1,6 @@
 import { Card } from 'react-bootstrap';
 import { useState } from 'react';
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
-
 import { AttentionSeeker } from 'react-awesome-reveal';
 
 const OfferCard = ({ offer }) => {
@@ -17,10 +16,7 @@ const OfferCard = ({ offer }) => {
         onHide={() => setModalShow(false)}
         offer={offer}
       />
-      <AttentionSeeker
-        animate__rubberBand
-        onClick={() => serviceClickHandler()}
-      >
+      <AttentionSeeker effect='flash' onClick={() => serviceClickHandler()}>
         <div
           style={{
             minHeight: '300px',

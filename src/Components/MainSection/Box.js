@@ -20,7 +20,7 @@ const Box = ({ item }) => {
   };
 
   return (
-    <>
+    <div className=' position-relative'>
       <motion.div
         //animation
         onHoverStart={() => openBoxHandler('open')}
@@ -65,7 +65,7 @@ const Box = ({ item }) => {
         itemIcon={item.icon}
       />
       <ClickOverlay />
-    </>
+    </div>
   );
 };
 

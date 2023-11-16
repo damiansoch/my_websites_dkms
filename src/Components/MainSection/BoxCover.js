@@ -1,4 +1,5 @@
 import React from 'react';
+import { AttentionSeeker } from 'react-awesome-reveal';
 
 const BoxCover = ({ isHovered, itemTitle, itemIcon }) => {
   return (
@@ -15,18 +16,20 @@ const BoxCover = ({ isHovered, itemTitle, itemIcon }) => {
         pointerEvents: 'none',
       }}
     >
-      <div className=' text-center d-flex flex-column gap-3 align-items-center justify-content-center'>
-        <img src={`/icons/${itemIcon}`} alt='icon 1' width={100} />
-        <h4
-          style={{
-            opacity: isHovered ? 0 : 1,
-            transition: '1s all ease',
-          }}
-          className='textShadow text-center text-danger'
-        >
-          {itemTitle}
-        </h4>
-      </div>
+      <AttentionSeeker animate__jello>
+        <div className=' text-center d-flex flex-column gap-3 align-items-center justify-content-center'>
+          <img src={`/icons/${itemIcon}`} alt='icon 1' width={100} />
+          <h4
+            style={{
+              opacity: isHovered ? 0 : 1,
+              transition: '1s all ease',
+            }}
+            className='textShadow text-center text-danger'
+          >
+            {itemTitle}
+          </h4>
+        </div>
+      </AttentionSeeker>
     </div>
   );
 };

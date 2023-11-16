@@ -40,14 +40,7 @@ const MainSection = () => {
   return (
     <div style={customGridStyle} className=' pt-3 pb-3'>
       {items.map((item, index) => (
-        <motion.div
-          key={index}
-          initial={{ scale: '0', opacity: 0, rotate: '-360deg' }}
-          animate={{ scale: '100%', opacity: 1, rotate: 0 }}
-          transition={{ delay: index * 0.4, duration: 0.5 }}
-        >
-          <Box item={item} key={index} />
-        </motion.div>
+        <Box item={item} key={index} />
       ))}
     </div>
   );
