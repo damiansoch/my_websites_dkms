@@ -34,7 +34,7 @@ const OfferSection = () => {
         }
       );
 
-      itemsRef.current.forEach((item) => {
+      itemsRef.current.forEach((item, index) => {
         gsap.fromTo(
           item,
           {
@@ -49,11 +49,11 @@ const OfferSection = () => {
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
             scrollTrigger: {
               trigger: item,
-              start: 'top center+=150',
-              end: 'top 50%',
+              start: `top center+=${150 * index}`, // Adjust start value based on index or any other criteria
+              end: `top ${50 + index * 10}%`, // Adjust end value based on index or any other criteria
               toggleActions: 'play none none reverse',
               scrub: 1,
-              //markers: true,
+              markers: true, // Enable markers for debugging if needed
             },
           }
         );
