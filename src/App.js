@@ -4,7 +4,7 @@ import './bootstrap.min.css';
 import WholeNav from './Components/Nav/WholeNav';
 import MainSection from './Components/MainSection/MainSection';
 import TitleBanner from './Components/MainSection/TitleBanner/TitleBanner';
-import ParticlesBg from './Components/Particles/ParticlesBg';
+//import ParticlesBg from './Components/Particles/ParticlesBg';
 import ContactSection from './Components/ContactSection/ContactSection';
 import CarouselSection from './Components/CarousellSection/CarouselSection';
 import FooterSection from './Components/FooterSection/FooterSection';
@@ -13,7 +13,7 @@ import OfferSection from './Components/OfferSection/OfferSection';
 function App() {
   return (
     <div className='App'>
-      <ParticlesBg id='top' />
+      {/* <ParticlesBg id='top' /> */}
       <WholeNav />
       <Container>
         <section id='titleBanner'>
