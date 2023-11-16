@@ -5,7 +5,7 @@ import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
 
 const OfferCard = ({ offer }) => {
   const [modalShow, setModalShow] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   const serviceClickHandler = () => {
     setModalShow(true);
@@ -24,7 +24,7 @@ const OfferCard = ({ offer }) => {
         <div
           style={{
             minHeight: '300px',
-            scale: isHovered ? '0.9' : 1,
+            // scale: isHovered ? '0.9' : 1,
             transition: '0.8s all ease',
             cursor: 'pointer',
           }}
@@ -55,13 +55,13 @@ const OfferCard = ({ offer }) => {
                 bottom: '30px',
                 left: '5px',
                 opacity: 1,
-                color: isHovered ? '#B9A43E' : '#EE5F5B',
-                scale: isHovered ? '1.3' : '1',
+                // color: isHovered ? '#B9A43E' : '#EE5F5B',
+                // scale: isHovered ? '1.3' : '1',
                 transition: '0.8s all ease',
                 fontWeight: 'bold',
                 letterSpacing: 1.2,
                 paddingBottom: '5px',
-                borderBottom: isHovered ? `2px solid #B9A43E` : 'none',
+                // borderBottom: isHovered ? `2px solid #B9A43E` : 'none',
               }}
             >
               {offer.title}
