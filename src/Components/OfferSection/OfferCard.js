@@ -2,32 +2,10 @@ import { Card } from 'react-bootstrap';
 import { useState } from 'react';
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
 import { keyframes } from '@emotion/react';
-import { Reveal } from 'react-awesome-reveal';
+import { AttentionSeeker } from 'react-awesome-reveal';
 
 const OfferCard = ({ offer }) => {
   const [modalShow, setModalShow] = useState(false);
-
-  const customAnimation = keyframes`
-  from {
-    scale:.5;
-    opacity: 0;
-    transform: translate3d(-200px, -100px, 0);
-  }
-
-  to {
-    scale:1;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
-  function CustomAnimation({ children }) {
-    return (
-      <Reveal delay={offer.delay} keyframes={customAnimation}>
-        {children}
-      </Reveal>
-    );
-  }
 
   const serviceClickHandler = () => {
     setModalShow(true);
@@ -39,7 +17,10 @@ const OfferCard = ({ offer }) => {
         onHide={() => setModalShow(false)}
         offer={offer}
       />
-      <CustomAnimation onClick={() => serviceClickHandler()}>
+      <AttentionSeeker
+        animate__rubberBand
+        onClick={() => serviceClickHandler()}
+      >
         <div
           style={{
             minHeight: '300px',
@@ -87,7 +68,7 @@ const OfferCard = ({ offer }) => {
             </h1>
           </div>
         </div>
-      </CustomAnimation>
+      </AttentionSeeker>
     </div>
   );
 };
