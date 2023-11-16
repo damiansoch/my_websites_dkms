@@ -17,6 +17,7 @@ export const offers = [
         'Static websites excel in presenting portfolios, personal blogs, informational sites, and small business platforms requiring infrequent content updates, making them well-suited for static landing pages or temporary promotions with stable information.',
     },
     picture: 'static.gif',
+    delay: 200,
   },
   {
     title: 'Dynamic Websites',
@@ -36,6 +37,7 @@ export const offers = [
         'Dynamic websites find applicability across diverse domains, including online forums, social networking platforms, news portals, and e-learning sites, proving especially advantageous for businesses necessitating regular content updates, user engagements, and tailored user experiences.',
     },
     picture: 'dynamic.gif',
+    delay: 300,
   },
   {
     title: 'E-comm Websites',
@@ -55,5 +57,6 @@ export const offers = [
         'E-commerce websites are essential for businesses seeking online sales, catering to diverse industries like retail, fashion, electronics, and digital services. Whether a small business or a large enterprise, having an e-commerce website unlocks the vast potential of online commerce.',
     },
     picture: 'ecommerce.gif',
+    delay: 400,
   },
 ];
