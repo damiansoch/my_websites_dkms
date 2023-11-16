@@ -1,7 +1,6 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import { AiOutlineHome, AiOutlineMail } from 'react-icons/ai';
 import { RiHandCoinLine } from 'react-icons/ri';
-import { motion } from 'framer-motion';
 import Logo from './Logo';
 import { useState } from 'react';
 
@@ -11,6 +10,9 @@ const Navigation = ({
   navIconSize,
   navHeight,
 }) => {
+  //gsap
+
+  //
   const [isTogglerActive, setIsTogglerActive] = useState(false);
 
   const handleToggle = (isOpen) => {
@@ -49,12 +51,7 @@ const Navigation = ({
               className='mb-2'
             />
             <br />
-            <motion.span
-              whileHover={{ color: '#EE5F5B' }}
-              style={{ color: '#4AC547' }}
-            >
-              Home
-            </motion.span>
+            <span style={{ color: '#4AC547' }}>Home</span>
           </Nav.Link>
           <Nav.Link
             href='#offerSection'
@@ -71,12 +68,7 @@ const Navigation = ({
               className='mb-2'
             />
             <br />
-            <motion.span
-              whileHover={{ color: '#EE5F5B' }}
-              style={{ color: '#4AC547' }}
-            >
-              Services
-            </motion.span>
+            <span style={{ color: '#4AC547' }}>Services</span>
           </Nav.Link>
           <Nav.Link
             href='#contactSection'
@@ -93,12 +85,7 @@ const Navigation = ({
               className='mb-2'
             />
             <br />
-            <motion.span
-              whileHover={{ color: '#EE5F5B' }}
-              style={{ color: '#4AC547' }}
-            >
-              Contact
-            </motion.span>
+            <span style={{ color: '#4AC547' }}>Contact</span>
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
