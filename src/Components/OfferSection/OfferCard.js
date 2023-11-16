@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+
 import { useState } from 'react';
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
 
@@ -17,24 +17,11 @@ const OfferCard = ({ offer }) => {
         onHide={() => setModalShow(false)}
         offer={offer}
       />
-      <motion.div
-        //animation
-        initial={{
-          scale: 0,
-          rotate: '85deg',
-        }}
-        whileInView={{ scale: 1, rotate: '0' }}
-        transition={{ delay: 0.5, duration: 0.8, ease: 'backOut' }}
-        //
+      <div
         className='col-11 col-md-3 mx-auto my-4'
         onClick={() => serviceClickHandler()}
       >
-        <motion.div
-          //animation
-          initial={{ scale: 1 }}
-          onHoverStart={() => setIsHovered(true)}
-          onHoverEnd={() => setIsHovered(false)}
-          //
+        <div
           style={{
             minHeight: '300px',
             scale: isHovered ? '0.9' : 1,
@@ -61,8 +48,8 @@ const OfferCard = ({ offer }) => {
           </Card.ImgOverlay>
 
           {/* Card Content */}
-          <motion.div className='card-body title'>
-            <motion.h1
+          <div className='card-body title'>
+            <h1
               style={{
                 position: 'absolute',
                 bottom: '30px',
@@ -78,10 +65,10 @@ const OfferCard = ({ offer }) => {
               }}
             >
               {offer.title}
-            </motion.h1>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+            </h1>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
