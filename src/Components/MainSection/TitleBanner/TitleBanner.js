@@ -9,7 +9,7 @@ const TitleBanner = () => {
     //whole div(bg)
     gsap.fromTo(
       '.bannerBgA',
-      { scale: 20, autoAlpha: 0 },
+      { scale: 0, autoAlpha: 0 },
       {
         scale: 1,
         autoAlpha: 1,

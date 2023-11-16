@@ -2,48 +2,77 @@ import React, { useEffect, useRef } from 'react';
 import { offers } from './offers';
 import OfferCard from './OfferCard';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger, Power2 } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const OfferSection = () => {
   //gsap
-  const containerRef = useRef(null);
+
+  const videoRef = useRef(null);
+  const itemsRef = useRef([]);
+  itemsRef.current = [];
+
+  const addToRefs = (item) => {
+    if (item) {
+      itemsRef.current.push(item);
+    }
+  };
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const items = Array.from(containerRef.current.children);
-
-    items.forEach((item, index) => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 80%',
-          end: 'bottom 20%',
-          scrub: true,
-          once: true,
-        },
-      });
-
-      tl.fromTo(
-        item,
-        { opacity: 0, y: 50 },
+    if (Array.isArray(offers) && offers.length > 0) {
+      gsap.fromTo(
+        videoRef.current,
         {
-          opacity: 1,
-          y: 0,
+          autoAlpha: 0,
+          clipPath: 'polygon(0 0, 0% 0, 0% 100%, 0 100%)',
+        },
+        {
+          autoAlpha: 1,
           duration: 1,
-          ease: 'power3.out',
-          delay: index * 0.2,
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
         }
       );
-    });
+
+      itemsRef.current.map((item) => {
+        gsap.fromTo(
+          item,
+          {
+            autoAlpha: 0,
+            ease: Power2,
+            clipPath: 'polygon(0 0, 0% 0, 0% 100%, 0 100%)',
+          },
+          {
+            duration: 1,
+            autoAlpha: 1,
+            ease: Power2,
+            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top center+=150',
+              end: 'top 50%',
+              toggleActions: 'play none none reverse',
+              scrub: 1,
+              //markers: true,
+            },
+          }
+        );
+      });
+    }
   }, []);
   //
   return (
     <div className=' text-center mt-5 mb-5'>
       <h1 className='title'>Services:</h1>
-      <div ref={containerRef} className='row'>
+      <div className='row'>
         {offers.map((offer, index) => (
-          <OfferCard offer={offer} key={index} />
+          <div
+            key={index}
+            ref={addToRefs}
+            className='col-11 col-md-3 mx-auto my-4'
+          >
+            <OfferCard offer={offer} />
+          </div>
         ))}
       </div>
     </div>

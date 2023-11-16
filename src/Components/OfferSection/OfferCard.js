@@ -18,7 +18,7 @@ const OfferCard = ({ offer }) => {
         offer={offer}
       />
       <div
-        className='col-11 col-md-3 mx-auto my-4'
+        //className='col-11 col-md-3 mx-auto my-4'
         onClick={() => serviceClickHandler()}
       >
         <div
