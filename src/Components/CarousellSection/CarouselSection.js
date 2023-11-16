@@ -8,7 +8,8 @@ const CarouselSection = () => {
       <Carousel fade style={{ marginTop: '60px' }}>
         {stages.map((stage, index) => (
           <Carousel.Item interval={3000} key={index}>
-            <div
+            <AttentionSeeker
+              effect='swing'
               className='d-flex align-items-center justify-content-center mx-auto'
               style={{
                 borderRadius: '20px',
@@ -27,7 +28,7 @@ const CarouselSection = () => {
                 alt=''
                 className='shadow'
               />
-            </div>
+            </AttentionSeeker>
             <Carousel.Caption
               color='black'
               style={{ position: 'relative', top: 0, left: 0 }}
