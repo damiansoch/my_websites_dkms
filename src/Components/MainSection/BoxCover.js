@@ -16,7 +16,7 @@ const BoxCover = ({ isHovered, itemTitle, itemIcon }) => {
         pointerEvents: 'none',
       }}
     >
-      <AttentionSeeker effect='jello' fraction={1}>
+      <AttentionSeeker effect='jello' fraction={0.5}>
         <div className=' text-center d-flex flex-column gap-3 align-items-center justify-content-center'>
           <img src={`/icons/${itemIcon}`} alt='icon 1' width={100} />
           <h4
