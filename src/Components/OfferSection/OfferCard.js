@@ -1,7 +1,7 @@
 import { Card } from 'react-bootstrap';
 import { useState } from 'react';
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
-import { keyframes } from '@emotion/react';
+
 import { AttentionSeeker } from 'react-awesome-reveal';
 
 const OfferCard = ({ offer }) => {
