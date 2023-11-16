@@ -34,7 +34,7 @@ const OfferSection = () => {
         }
       );
 
-      itemsRef.current.map((item) => {
+      itemsRef.current.forEach((item) => {
         gsap.fromTo(
           item,
           {
