@@ -21,7 +21,7 @@ const WholeNav = () => {
     gsap.fromTo(
       '.nav',
       { autoAlpha: 0 },
-      { autoAlpha: 1, duration: 1, delay: 0.5 }
+      { autoAlpha: 1, duration: 1, delay: 1 }
     );
   }, []);
   //
