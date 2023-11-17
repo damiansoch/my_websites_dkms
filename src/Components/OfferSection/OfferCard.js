@@ -33,6 +33,9 @@ const OfferCard = ({ offer }) => {
               className='card-video'
               src={`/icons/ServicesImages/${offer.picture}`}
               alt={`/icons/ServicesImages/${offer.picture}`}
+              style={{
+                filter: 'drop-shadow(16px 16px 20px yellow) invert(20%)',
+              }}
             />
           </Card.ImgOverlay>
 
