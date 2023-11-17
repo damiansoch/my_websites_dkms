@@ -1,4 +1,4 @@
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 import { AiOutlineHome, AiOutlineMail } from 'react-icons/ai';
 import { RiHandCoinLine } from 'react-icons/ri';
 import Logo from './Logo';
@@ -55,32 +55,16 @@ const Navigation = ({
         in={isTogglerActive}
       >
         <Nav className='ms-auto'>
-          <Nav.Link
-            href='#top'
-            style={{
-              height: navHeight,
-              backgroundColor: isTogglerActive
-                ? 'rgba(39, 43, 48, 0.7)'
-                : 'rgba(39, 43, 48, 0.5)',
-            }}
-          >
+          <Button className='btn-sm btn-dark' href='#top'>
             <AiOutlineHome
               size={navIconSize}
               color='#4AC547'
-              className='mb-2'
+              className='mb-2 '
             />
             <br />
             <span style={{ color: '#4AC547' }}>Home</span>
-          </Nav.Link>
-          <Nav.Link
-            href='#offerSection'
-            style={{
-              height: navHeight,
-              backgroundColor: isTogglerActive
-                ? 'rgba(39, 43, 48, 0.7)'
-                : 'rgba(39, 43, 48, 0.5)',
-            }}
-          >
+          </Button>
+          <Button className='btn-sm btn-dark' href='#offerSection'>
             <RiHandCoinLine
               size={navIconSize}
               color='#4AC547'
@@ -88,16 +72,8 @@ const Navigation = ({
             />
             <br />
             <span style={{ color: '#4AC547' }}>Services</span>
-          </Nav.Link>
-          <Nav.Link
-            href='#contactSection'
-            style={{
-              height: navHeight,
-              backgroundColor: isTogglerActive
-                ? 'rgba(39, 43, 48, 0.7)'
-                : 'rgba(39, 43, 48, 0.5)',
-            }}
-          >
+          </Button>
+          <Button className='btn-sm btn-dark' href='#contactSection'>
             <AiOutlineMail
               size={navIconSize}
               color='#4AC547'
@@ -105,7 +81,7 @@ const Navigation = ({
             />
             <br />
             <span style={{ color: '#4AC547' }}>Contact</span>
-          </Nav.Link>
+          </Button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
