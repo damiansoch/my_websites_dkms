@@ -15,6 +15,7 @@ const CarouselSection = () => {
                 borderRadius: '20px',
                 overflow: 'hidden',
                 maxWidth: '60vw',
+                filter: 'drop-shadow(10px 10px 10px red) invert(10%)',
               }}
             >
               <img
@@ -26,7 +27,6 @@ const CarouselSection = () => {
                 }}
                 src={`/icons/CarousellImgs/${stage.picture}`}
                 alt=''
-                className='shadow'
               />
             </AttentionSeeker>
             <Carousel.Caption
