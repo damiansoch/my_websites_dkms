@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { motion } from 'framer-motion';
 
 const EmailForm = ({ setDivHeight }) => {
   const divRef = useRef(null);
@@ -10,10 +11,15 @@ const EmailForm = ({ setDivHeight }) => {
     }
   }, [setDivHeight]);
   return (
-    <div
+    <motion.div
+      //anim
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.4 }}
+      //
       ref={divRef}
       id='emailContactDiv'
       className='shadow contactSingleContainer p-3'
+      style={{ filter: 'drop-shadow(1px 1px 3px red) invert(5%)' }}
     >
       <Form action='https://formspree.io/f/xyyqvawj' method='POST'>
         <Form.Group className='mb-3'>
@@ -44,7 +50,7 @@ const EmailForm = ({ setDivHeight }) => {
           Submit
         </Button>
       </Form>
-    </div>
+    </motion.div>
   );
 };
 
