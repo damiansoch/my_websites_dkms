@@ -6,20 +6,16 @@ import { MdOutlineCenterFocusStrong } from 'react-icons/md';
 import { SiWheniwork } from 'react-icons/si';
 
 function MyVerticallyCenteredModal(props) {
-  const [title, setTitle] = useState(props.offer.definition.title);
   const [message, setMessage] = useState(props.offer.definition.message);
   const chooseTopicHandler = (topic) => {
     switch (topic) {
       case 'definition':
-        setTitle(props.offer.definition.title);
         setMessage(props.offer.definition.message);
         break;
       case 'advantages':
-        setTitle(props.offer.advantages.title);
         setMessage(props.offer.advantages.message);
         break;
       case 'useCases':
-        setTitle(props.offer.useCases.title);
         setMessage(props.offer.useCases.message);
         break;
 
