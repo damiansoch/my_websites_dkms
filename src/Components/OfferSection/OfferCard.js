@@ -2,6 +2,7 @@ import { Card } from 'react-bootstrap';
 import { useState } from 'react';
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
 import { Bounce } from 'react-awesome-reveal';
+import ClickOverlay from '../MainSection/ClickOverlay';
 
 const OfferCard = ({ offer }) => {
   const [modalShow, setModalShow] = useState(false);
@@ -37,6 +38,7 @@ const OfferCard = ({ offer }) => {
                 filter: 'drop-shadow(16px 16px 20px yellow) invert(20%)',
               }}
             />
+            <ClickOverlay />
           </Card.ImgOverlay>
 
           {/* Card Content */}
