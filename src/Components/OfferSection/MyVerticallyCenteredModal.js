@@ -36,19 +36,45 @@ function MyVerticallyCenteredModal(props) {
       centered
       className='custom-modal'
     >
-      <Modal.Header closeButton>
+      <Modal.Header
+        closeButton
+        style={{
+          background: 'rgba(16,16,16,1)',
+          textAlign: 'justify',
+        }}
+      >
         <Modal.Title
-          className='text-success'
+          className='text-success title'
           id='contained-modal-title-vcenter'
         >
           {props.offer.title}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <h4>{title}</h4>
-        <p style={{ textAlign: 'justify' }}>{message}</p>
+      <Modal.Body
+        style={{
+          background:
+            'radial-gradient(ellipse at center, rgba(84,13,6,1) 0%, rgba(16,16,16,1) 100%)',
+        }}
+      >
+        <p
+          style={{
+            textAlign: 'justify',
+            fontFamily: 'Edu TAS Beginner',
+            fontSize: '115%',
+            lineHeight: '1.5',
+            textShadow: '2px 2px #000000',
+            color: 'white',
+          }}
+        >
+          {message}
+        </p>
       </Modal.Body>
-      <Modal.Footer className=' d-flex align-items-center justify-content-evenly'>
+      <Modal.Footer
+        style={{
+          background: 'rgba(16,16,16,1)',
+        }}
+        className=' d-flex align-items-center justify-content-evenly'
+      >
         <Button
           className=' btn-sm btn-success'
           active
