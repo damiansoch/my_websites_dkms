@@ -4,9 +4,11 @@ import Modal from 'react-bootstrap/Modal';
 import { VscActivateBreakpoints } from 'react-icons/vsc';
 import { MdOutlineCenterFocusStrong } from 'react-icons/md';
 import { SiWheniwork } from 'react-icons/si';
+import { TypeAnimation } from 'react-type-animation';
 
 function MyVerticallyCenteredModal(props) {
   const [message, setMessage] = useState(props.offer.definition.message);
+  console.log(message);
   const chooseTopicHandler = (topic) => {
     switch (topic) {
       case 'definition':
@@ -52,7 +54,10 @@ function MyVerticallyCenteredModal(props) {
             'radial-gradient(ellipse at center, rgba(84,13,6,1) 0%, rgba(16,16,16,1) 100%)',
         }}
       >
-        <p
+        <TypeAnimation
+          key={message}
+          sequence={[message]}
+          speed={50}
           style={{
             textAlign: 'justify',
             fontFamily: 'Edu TAS Beginner',
@@ -61,9 +66,7 @@ function MyVerticallyCenteredModal(props) {
             textShadow: '2px 2px #000000',
             color: 'white',
           }}
-        >
-          {message}
-        </p>
+        />
       </Modal.Body>
       <Modal.Footer
         style={{
