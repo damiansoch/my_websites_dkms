@@ -8,7 +8,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 function MyVerticallyCenteredModal(props) {
   const [message, setMessage] = useState(props.offer.definition.message);
-  console.log(message);
+
   const chooseTopicHandler = (topic) => {
     switch (topic) {
       case 'definition':
