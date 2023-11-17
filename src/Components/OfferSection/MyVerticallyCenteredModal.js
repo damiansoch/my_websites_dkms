@@ -8,17 +8,21 @@ import { TypeAnimation } from 'react-type-animation';
 
 function MyVerticallyCenteredModal(props) {
   const [message, setMessage] = useState(props.offer.definition.message);
+  const [title, setTitle] = useState(props.offer.definition.title);
 
   const chooseTopicHandler = (topic) => {
     switch (topic) {
       case 'definition':
         setMessage(props.offer.definition.message);
+        setTitle(props.offer.definition.title);
         break;
       case 'advantages':
         setMessage(props.offer.advantages.message);
+        setTitle(props.offer.advantages.title);
         break;
       case 'useCases':
         setMessage(props.offer.useCases.message);
+        setTitle(props.offer.useCases.title);
         break;
 
       default:
@@ -75,30 +79,37 @@ function MyVerticallyCenteredModal(props) {
         className=' d-flex align-items-center justify-content-evenly'
       >
         <Button
-          className=' btn-sm btn-success'
-          active
+          className={` btn-sm rounded-pill d-flex flex-column gap-1 align-items-center `}
           onClick={() => chooseTopicHandler('definition')}
         >
-          <VscActivateBreakpoints size={30} color='#EE5F5B' />
-          <br />
-          <span className=' ms-2'>{props.offer.definition.title}</span>
+          <VscActivateBreakpoints
+            size={30}
+            color={`${title === 'Definition' ? '#4ac547' : '#ee5f5b'}`}
+          />
+
+          <span className=' px-2'>{props.offer.definition.title}</span>
         </Button>
         <Button
-          className=' btn-sm btn-success'
+          className={` btn-sm rounded-pill  d-flex flex-column gap-1 align-items-center `}
           onClick={() => chooseTopicHandler('advantages')}
         >
-          <MdOutlineCenterFocusStrong size={30} color='#EE5F5B' />
-          <br />
-          <span className=' ms-2'>{props.offer.advantages.title}</span>
+          <MdOutlineCenterFocusStrong
+            size={30}
+            color={`${title === 'Advantages' ? '#4ac547' : '#ee5f5b'}`}
+          />
+
+          <span className='px-2 '>{props.offer.advantages.title}</span>
         </Button>
         <Button
-          variant='secondaty'
-          className=' btn-sm btn-success'
+          className={` btn-sm rounded-pill  d-flex flex-column gap-1 align-items-center `}
           onClick={() => chooseTopicHandler('useCases')}
         >
-          <SiWheniwork size={30} color='#EE5F5B' />
-          <br />
-          <span className=' ms-2'>{props.offer.useCases.title}</span>
+          <SiWheniwork
+            size={30}
+            color={`${title === 'Use Cases' ? '#4ac547' : '#ee5f5b'}`}
+          />
+
+          <span className='px-2'>{props.offer.useCases.title}</span>
         </Button>
       </Modal.Footer>
     </Modal>
