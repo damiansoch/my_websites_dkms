@@ -1,7 +1,15 @@
+import { motion } from 'framer-motion';
+
 const OterContactDetails = ({ divHeight }) => {
   return (
-    <div
-      style={{ height: divHeight }}
+    <motion.div
+      //anim
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.4 }}
+      style={{
+        height: divHeight,
+        filter: 'drop-shadow(1px 1px 3px red) invert(5%)',
+      }}
       className='shadow contactSingleContainer justify-content-evenly'
     >
       <div>
@@ -17,7 +25,7 @@ const OterContactDetails = ({ divHeight }) => {
           <a href='tel:0868406691'>Phone: 0868406691</a>
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

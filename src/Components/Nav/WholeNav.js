@@ -1,4 +1,6 @@
+import React, { useEffect } from 'react';
 import Navigation from './Navigation';
+import gsap from 'gsap';
 
 const WholeNav = () => {
   let logoHeight = 100;
@@ -11,6 +13,18 @@ const WholeNav = () => {
     navIconSize = 20;
     navHeight = '70px';
   }
+  //gsap
+
+  useEffect(() => {
+    // Use GSAP to create an animation
+
+    gsap.fromTo(
+      '.nav',
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 1, delay: 1 }
+    );
+  }, []);
+  //
   return (
     <div
       style={{
@@ -20,7 +34,7 @@ const WholeNav = () => {
         width: '100%',
         zIndex: 10,
       }}
-      className=' d-flex align-items-center justify-content-between'
+      className='nav d-flex align-items-center justify-content-between'
     >
       <Navigation
         logoHeight={logoHeight}

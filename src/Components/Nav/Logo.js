@@ -1,26 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const Logo = ({ initialLogoScale, logoHeight }) => {
   return (
-    <motion.div
+    <div
       //animation
-      initial={{
-        x: '300px',
-        y: 0,
-        scale: initialLogoScale,
-        opacity: 0.3,
-      }}
-      animate={{ x: -50, y: 0, scale: 1, opacity: 1 }}
-      transition={{ ease: 'easeOut', duration: 2, delay: 0.5 }}
-      whileHover={{
-        scale: 1.2,
-        transition: { duration: 1 },
-      }}
-      whileTap={{ scale: 0.9 }}
+
       //
       xs={2}
-      className=' d-flex justify-content-center align-items-center mx-5 mt-2'
+      className=' d-flex justify-content-center align-items-center  mt-2'
       style={{ zIndex: 1 }}
     >
       <img
@@ -28,7 +15,7 @@ const Logo = ({ initialLogoScale, logoHeight }) => {
         alt='Your Logo'
         height={logoHeight}
       />
-    </motion.div>
+    </div>
   );
 };
 
