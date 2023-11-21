@@ -13,7 +13,7 @@ const CarouselSection = () => {
               className='d-flex align-items-center justify-content-center mx-auto'
               style={{
                 borderRadius: '20px',
-                overflow: 'hidden',
+                //overflow: 'hidden',
                 maxWidth: '60vw',
                 filter: 'drop-shadow(10px 10px 10px red) invert(10%)',
               }}
